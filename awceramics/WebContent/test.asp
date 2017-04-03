@@ -1,0 +1,1 @@
+<h1 id="header"><%Response.Write "Search Results for XXX - 3 matches " & Now%></h1>

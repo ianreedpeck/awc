@@ -1,0 +1,27 @@
+{
+  "name": "conFusion",
+  "description": "website for an awesome restaurant",
+  "main": "index.html",
+  "keywords": [
+    "confusion",
+    "fusion",
+    "restaurant"
+  ],
+  "authors": [
+    "ian"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.2"
+  }
+}

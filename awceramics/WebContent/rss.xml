@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<atom:link href="http://www.awceramics.co.uk/blog.xml" rel="self" type="application/rss+xml" />
+		<title>AWCeramics Blog Feed</title>
+		<link>http://www.awceramics.co.uk/blog.htm</link>
+		<description>This is my blog</description>
+		<item>
+			<title>The Harrogate Experience</title>
+			<link>http://www.awceramics.co.uk/blogs/blog12.htm</link>
+			<guid>http://www.awceramics.co.uk/blogs/blog12.htm</guid>
+			<description>The Harrogate Experience</description>
+			<pubDate>Fri, 23 Apr 2010 07:00:00 GMT</pubDate>
+		</item>
+		<item>
+			<title>Going to Harrogate</title>
+			<link>http://www.awceramics.co.uk/blogs/blog11.htm</link>
+			<guid>http://www.awceramics.co.uk/blogs/blog11.htm</guid>
+			<description>Going to Harrogate</description>
+			<pubDate>Mon, 5 Apr 2010 07:00:00 GMT</pubDate>
+		</item>
+		<item>
+			<title>Bespoke work for St Pauls</title>
+			<link>http://www.awceramics.co.uk/blogs/blog10.htm</link>
+			<guid>http://www.awceramics.co.uk/blogs/blog10.htm</guid>
+			<description>Bespoke work for St Pauls</description>
+			<pubDate>Sun, 21 Mar 2010 07:00:00 GMT</pubDate>
+		</item>
+		<item>
+			<title>Things from my life..</title>
+			<link>http://www.awceramics.co.uk/blogs/blog9.htm</link>
+			<guid>http://www.awceramics.co.uk/blogs/blog9.htm</guid>
+			<description>Things from my life..</description>
+			<pubDate>Tue, 9 Mar 2010 07:00:00 GMT</pubDate>
+		</item>
+
+	</channel>
+</rss>
