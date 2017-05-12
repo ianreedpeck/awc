@@ -38,19 +38,19 @@
                         </ul>
                     </li>
 								
-					
-					 <li>
-                        <a href="../allison.htm">
+					 <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                            role="button" aria-haspopup="true" aria-expanded="false">
                             <span class="glyphicon glyphicon-user"
-                                    aria-hidden="true"></span> About Allison
+                                    aria-hidden="true"></span> About Allison <span class="caret"></span>
                         </a>
-                    </li>
-                     <li>
-                        <a href="../blog.htm">
-                            <span class="glyphicon glyphicon-book"
-                                    aria-hidden="true"></span> Allison's Blog
-                        </a>
-                    </li>	
+					  <ul class="dropdown-menu">
+                            <li><a href="../allison.htm">Allison</a></li>
+                            <li><a href="../blog.htm">Allison's Blog</a></li>
+                   			<li><a href="../contact.htm">Contact Details</a></li>
+                            
+                        </ul>
+                   
                      <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                             role="button" aria-haspopup="true" aria-expanded="false">
@@ -77,9 +77,51 @@
                     </li>
 					<li><a href="http://www.romancart.com/cart.asp?storeid=39173"><i class="glyphicon glyphicon-shopping-cart"></i> Basket</a></li>
 					
-                    <li><a href="../contact.htm"><i class="fa fa-envelope"></i> Contact</a></li>
+                </ul>
+                 <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="btnSearch">
+                            <span class="pull-right glyphicon glyphicon-log-in" ></span> Search
+                        </a>
+                    </li>
                 </ul>
                
             </div>
 		</div>
 	</nav>
+	
+	
+	 <div id="searchModal" class="modal fade" role="dialog">
+	 
+        <div class="modal-dialog" role="document">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Search </h4>
+                </div>
+                <div class="modal-body" >
+                    <form class="form-inline" action="../search.asp" method="post" >
+                        <div class="form-group">
+                            <label class="sr-only" for="search">Password</label>
+                            <input type="search" class="form-control input-sm" id="searchtext" name="searchtext"  placeholder="Search">
+                        </div>
+                        <button id="submit" type="submit" class="btn btn-info btn-sm">Search</button>
+                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	 <script> 
+	     
+	    
+	    $(document).ready(function(){
+	    
+		    $("#btnSearch").click(function(){
+	            $("#searchModal").modal("show");
+	        });
+		    
+	    });  
+    </script> 	

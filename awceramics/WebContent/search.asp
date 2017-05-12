@@ -52,17 +52,17 @@
 
 <div class="input-group">
 <form action="search.asp" method="post" >
-		 <input id="search" type="text" placeholder="Search for" class="form-control searchBox">
+		 <input id="searchtext" name="searchtext" type="text" placeholder="Search for" class="form-control searchBox">
 			 <span class="input-group-btn">
-				 <button class="btn btn-default" type="submit" id="search">Search</button>
+				 <button class="btn btn-default" type="submit" id="searchbut">Search</button>
 			</span>
 	</form>
 </div>
 <p>			
-<h1 id="header">Search Results for  - 0 matches</h1>	
+
 <table class="search">
 
-
+<%=  Request.Form("searchtext")  %>
 
 <%
 Dim adoCon
@@ -125,7 +125,6 @@ strSQL = "select imagename, itemname, itemhref, rangename, rangehref, type from 
 rsProductSearch.Open strSQL, adoCon
 
 
-
 %>
 
 <thead>
@@ -136,7 +135,10 @@ rsProductSearch.Open strSQL, adoCon
 </tr>
 </thead>
 <tbody>
-<% Do While not rsProductSearch.EOF 
+<% 
+
+
+Do While not rsProductSearch.EOF 
 if rsProductSearch("type") = "cufflink" then
 %>
 <tr>

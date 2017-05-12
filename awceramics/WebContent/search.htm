@@ -31,6 +31,8 @@
 	
 	  <div id="includeMenu"></div>	
 	  
+	  
+	  
    <header class="jumbotron jumbotron-fluid">
 
 	 <div class="container">
@@ -52,9 +54,11 @@
 
 <div class="input-group">
 <form action="search.asp" method="post" >
-		 <input id="search" type="text" placeholder="Search for" class="form-control searchBox">
+		 <input id="searchtext" name="searchtext" 
+		 
+		 type="text" placeholder="Search for" class="form-control searchBox">
 			 <span class="input-group-btn">
-				 <button class="btn btn-default" type="submit" id="search">Search</button>
+				 <button class="btn btn-default" type="submit" id="searchbut">Search</button>
 			</span>
 	</form>
 </div>
@@ -89,9 +93,10 @@
 <td><img src="images/pendants/Angel of the North pendant (silver chain).jpg" alt="The Angel of the North pendant" width="230" height="345"></td>
 <td>name</td>
 <td>range</td>
+</tr>
 </tbody>
 
-</tr>
+
 
 </table>
 
@@ -113,7 +118,11 @@
 	      $("#includeFooter").load("footer.html"); 
 	      $("#includeMenu").load("menu.html"); 
 	    });
+	    
+	   
     </script> 	
+    
+    
 
 </body>
 
