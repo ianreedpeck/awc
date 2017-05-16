@@ -44,25 +44,17 @@
 
 <ol class="breadcrumb">
   <li><a href="index.htm">Home</a></li>
-  <li class="active">Jewellery Ranges</li>
+  <li class="active">Search Results</li>
 </ol>
 
 
 
+   <div class="container">
 
-<div class="input-group">
-<form action="search.asp" method="post" >
-		 <input id="searchtext" name="searchtext" type="text" placeholder="Search for" class="form-control searchBox">
-			 <span class="input-group-btn">
-				 <button class="btn btn-default" type="submit" id="searchbut">Search</button>
-			</span>
-	</form>
-</div>
-<p>			
+			
 
 <table class="search">
 
-<%=  Request.Form("searchtext")  %>
 
 <%
 Dim adoCon
@@ -112,6 +104,7 @@ strSQL = "select count(*) from tbProductsearch where " & strWhere
 rsProductCount.Open strSQL, adoCon
 
 i = rsProductCount(0)
+
 strHeader = "<h1 id=""header"">Search Results for " & strSearch & " - " & i
 if i = 1 then
 	strHeader = strHeader & " match </h1>"
@@ -126,7 +119,7 @@ rsProductSearch.Open strSQL, adoCon
 
 
 %>
-
+<p>
 <thead>
 <tr>
 <th>Design</th>
@@ -249,10 +242,9 @@ Set rsAddQuery = nothing
 Set adoCon = nothing
 
 %>
-</td>
-</tr>
+<p>
 </div>
-
+</div>
 
     <div id="includeFooter"></div>
          
