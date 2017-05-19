@@ -68,6 +68,9 @@ Dim i
 Dim wordArray
 Dim strWhere
 Dim strHeader
+Dim iCount
+
+iCount = 0 
 
 strSearch = Request.Form("searchtext")
 strOriginalSearch = strSearch
@@ -120,28 +123,42 @@ rsProductSearch.Open strSQL, adoCon
 
 %>
 <p>
-<thead>
-<tr>
-<th>Design</th>
-<th>Product Name</th>
-<th>Range of item</th>
-</tr>
-</thead>
-<tbody>
 <% 
 
 
 Do While not rsProductSearch.EOF 
+
 if rsProductSearch("type") = "cufflink" then
+
+if (iCount =0) then
 %>
-<tr>
-<td><a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" 	width= "230px" height= "146px"></a></td>
-<td><a class="menu" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a></td>
-	<td><a class="menu" href="<%= rsProductSearch("rangehref") %>"><%= rsProductSearch("rangename") %></a></td>
-</tr>
-<% 
+
+	<div class="row">
+	<% 
+end if
+%>
+
+    <div class="col-sm-4" class="col-md-4">
+<div class="ranges_thumbnail"> <a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" ></a>
+<a class="menu" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
+<p><p>	<a class="menu" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
+</div>
+</div>
+<%
+if (iCount =2) then
+	iCount = 0
+%>
+	</div>
+	<% 
+else 
+	iCount=iCount+1
+end if
+
+ 
 end if
 rsProductSearch.MoveNext
+
+
 Loop 
 
 
