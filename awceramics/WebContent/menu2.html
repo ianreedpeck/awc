@@ -123,5 +123,9 @@
 	            $("#searchModal").modal("show");
 	        });
 		    
+			$('#searchModal').on('shown.bs.modal', function() {
+				$('#searchtext').focus();
+			});
+		    
 	    });  
     </script> 	

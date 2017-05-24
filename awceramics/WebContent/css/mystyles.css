@@ -112,6 +112,18 @@ a.product_link {text-decoration: none}
   top: 0;
 }
 
+
+a.range_link_search:link {color: #AfAfAf; text-align: justify; }
+a.range_link_search:visited {color: #89978D}
+a.range_link_search:hover {color: blue; text-decoration: underline}
+a.range_link_search {text-decoration: none}
+
+a.product_link_search:link {color: #AfAfAf; text-align: justify; }
+a.product_link_search:visited {color: #89978D}
+a.product_link_search:hover {color: blue; text-decoration: underline; }
+a.product_link_search {text-decoration: none}
+
+
 .pocketsquareimg {
   left: 5;
   max-height: 600px;
@@ -324,6 +336,23 @@ div.gallery img
     color: #871F78;
 }
 
+.style-3 {
+    color: black;
+	 font-size: 125%;
+	 margin: 5px 100px 0 5px;
+	
+}
+.style-3:hover, 
+.style:focus {
+    color: #2b542c;
+}
+
+.style-3:visited {color: gray}
+
+h1 {
+	margin: 20px 10px 0 5px;
+}
+
 h1 {
 	margin: 20px 10px 0 5px;
 }
@@ -375,5 +404,7 @@ table.search thead
 table.search img
 {
 	margin: 5px 0 0 5px;
-	border: 1px solid #777;
+	border: 0px solid #777;
 }
+
+
