@@ -108,7 +108,7 @@ rsProductCount.Open strSQL, adoCon
 
 i = rsProductCount(0)
 
-strHeader = "<h1 id=""header"">Search Results for " & strSearch & " - " & i
+strHeader = "<h1 id=""header"">Search Results for " & Server.HTMLEncode(strSearch) & " - " & i
 if i = 1 then
 	strHeader = strHeader & " match </h1>"
 else
@@ -140,8 +140,8 @@ end if
 
     <div class="col-sm-4" class="col-md-4">
 <div class="ranges_thumbnail"> <a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" ></a>
-<a class="menu" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
-<p><p>	<a class="menu" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
+<a class="style-3" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
+<p><p>	<a class="style-3" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
 </div>
 </div>
 <%
@@ -188,8 +188,8 @@ end if
 
     <div class="col-sm-4" class="col-md-4">
 <div class="ranges_thumbnail"> <a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" ></a>
-<a class="menu" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
-<p><p>	<a class="menu" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
+<a class="style-3" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
+<p><p>	<a class="style-3" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
 </div>
 </div>
 <%
@@ -236,8 +236,8 @@ end if
 
     <div class="col-sm-4" class="col-md-4">
 <div class="ranges_thumbnail"> <a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" ></a>
-<a class="menu" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
-<p><p>	<a class="menu" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
+<a class="style-3" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
+<p><p>	<a class="style-3" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
 </div>
 </div>
 <%
@@ -283,8 +283,8 @@ end if
 
     <div class="col-sm-4" class="col-md-4">
 <div class="ranges_thumbnail"> <a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" ></a>
-<a class="menu" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
-<p><p>	<a class="menu" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
+<a class="style-3" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
+<p><p>	<a class="style-3" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
 </div>
 </div>
 <%
@@ -330,8 +330,8 @@ end if
 
     <div class="col-sm-4" class="col-md-4">
 <div class="ranges_thumbnail"> <a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" ></a>
-<a class="menu" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
-<p><p>	<a class="menu" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
+<a class="style-3" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
+<p><p>	<a class="style-3" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
 </div>
 </div>
 <%
@@ -370,8 +370,8 @@ end if
 
     <div class="col-sm-4" class="col-md-4">
 <div class="ranges_thumbnail"> <a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" ></a>
-<a class="menu" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
-<p><p>	<a class="menu" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
+<a class="style-3" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
+<p><p>	<a class="style-3" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
 </div>
 </div>
 <%

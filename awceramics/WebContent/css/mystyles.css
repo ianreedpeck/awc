@@ -336,6 +336,23 @@ div.gallery img
     color: #871F78;
 }
 
+.style-3 {
+    color: black;
+	 font-size: 125%;
+	 margin: 5px 100px 0 5px;
+	
+}
+.style-3:hover, 
+.style:focus {
+    color: #2b542c;
+}
+
+.style-3:visited {color: gray}
+
+h1 {
+	margin: 20px 10px 0 5px;
+}
+
 h1 {
 	margin: 20px 10px 0 5px;
 }
