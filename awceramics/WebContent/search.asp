@@ -69,8 +69,17 @@ Dim wordArray
 Dim strWhere
 Dim strHeader
 Dim iCount
+Dim cufflinkCount
+Dim squareCount
+Dim pendantCount
+Dim earringCount
 
 iCount = 0 
+cufflinkCount = 0 
+squareCount = 0 
+pendantCount = 0 
+earringCount = 0 
+
 
 strSearch = Request.Form("searchtext")
 strOriginalSearch = strSearch
@@ -130,7 +139,7 @@ rsProductSearch.Open strSQL, adoCon
 Do While not rsProductSearch.EOF 
 
 if rsProductSearch("type") = "cufflink" then
-
+cufflinkCount = cufflinkCount + 1
 if (iCount =0) then
 %>
 	<div class="row">
@@ -140,8 +149,8 @@ end if
 
     <div class="col-sm-4" class="col-md-4">
 <div class="ranges_thumbnail"> <a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" ></a>
-<a class="style-3" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
-<p><p>	<a class="style-3" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
+<a class="style-2" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
+<p><p>	<a class="style-2" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
 </div>
 </div>
 <%
@@ -162,6 +171,18 @@ rsProductSearch.MoveNext
 Loop 
 
 
+if cufflinkCount = 0 then
+	%>
+	
+	<div class="row">
+	
+	<p>
+	<h3>No cufflinks match search</h3>
+	
+	</div>
+	<% 
+end if
+
 	iCount = 0
 %>
 	</div>
@@ -177,7 +198,7 @@ end if
 Do While not rsProductSearch.EOF 
 
 if rsProductSearch("type") = "square" then
-
+squareCount = squareCount + 1
 if (iCount =0) then
 %>
 	
@@ -208,6 +229,20 @@ rsProductSearch.MoveNext
 
 
 Loop 
+
+
+
+if squareCount = 0 then
+	%>
+	
+	<div class="row">
+	
+	<p>
+	<h3>No pocket squares match search</h3>
+	
+	</div>
+	<% 
+end if
 
 
 	iCount = 0
@@ -225,7 +260,7 @@ end if
 Do While not rsProductSearch.EOF 
 
 if rsProductSearch("type") = "brooch" then
-
+broochCount = broochCount + 1
 if (iCount =0) then
 %>
 	
@@ -257,6 +292,17 @@ rsProductSearch.MoveNext
 
 Loop 
 
+if broochCount = 0 then
+	%>
+	
+	<div class="row">
+	
+	<p>
+	<h3>No brooches match search</h3>
+	
+	</div>
+	<% 
+end if
 
 	iCount = 0
 %>
@@ -273,7 +319,7 @@ end if
 Do While not rsProductSearch.EOF 
 
 if rsProductSearch("type") = "earrings" then
-
+earringCount = earringCount+ 1
 if (iCount =0) then
 %>
 	<div class="row">
@@ -304,6 +350,17 @@ rsProductSearch.MoveNext
 
 Loop 
 
+if squareCount = 0 then
+	%>
+	
+	<div class="row">
+	
+	<p>
+	<h3>No earrings match search</h3>
+	
+	</div>
+	<% 
+end if
 
 	iCount = 0
 %>
@@ -320,7 +377,7 @@ end if
 Do While not rsProductSearch.EOF 
 
 if rsProductSearch("type") = "pendant" then
-
+pendantCount = pendantCount + 1
 if (iCount =0) then
 %>
 	<div class="row">
@@ -359,7 +416,7 @@ end if
 Do While not rsProductSearch.EOF 
 
 if rsProductSearch("type") = "pendant2" then
-
+pendantCount = pendantCount + 1
 if (iCount =0) then
 %>
 	
@@ -398,7 +455,17 @@ if (iCount <2) then
 <%
 end if
 
-
+if pendantCount = 0 then
+	%>
+	
+	<div class="row">
+	
+	<p>
+	<h3>No pendants match search</h3>
+	
+	</div>
+	<% 
+end if
 
 
 rsAddQuery.Close
