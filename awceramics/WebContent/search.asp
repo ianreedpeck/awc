@@ -44,24 +44,16 @@
 
 <ol class="breadcrumb">
   <li><a href="index.htm">Home</a></li>
-  <li class="active">Jewellery Ranges</li>
+  <li class="active">Search Results</li>
 </ol>
 
 
 
+   <div class="container">
 
-<div class="input-group">
-<form action="search.asp" method="post" >
-		 <input id="search" type="text" placeholder="Search for" class="form-control searchBox">
-			 <span class="input-group-btn">
-				 <button class="btn btn-default" type="submit" id="search">Search</button>
-			</span>
-	</form>
-</div>
-<p>			
-<h1 id="header">Search Results for  - 0 matches</h1>	
+			
+
 <table class="search">
-
 
 
 <%
@@ -76,6 +68,9 @@ Dim i
 Dim wordArray
 Dim strWhere
 Dim strHeader
+Dim iCount
+
+iCount = 0 
 
 strSearch = Request.Form("searchtext")
 strOriginalSearch = strSearch
@@ -112,7 +107,8 @@ strSQL = "select count(*) from tbProductsearch where " & strWhere
 rsProductCount.Open strSQL, adoCon
 
 i = rsProductCount(0)
-strHeader = "<h1 id=""header"">Search Results for " & strSearch & " - " & i
+
+strHeader = "<h1 id=""header"">Search Results for " & Server.HTMLEncode(strSearch) & " - " & i
 if i = 1 then
 	strHeader = strHeader & " match </h1>"
 else
@@ -125,119 +121,286 @@ strSQL = "select imagename, itemname, itemhref, rangename, rangehref, type from 
 rsProductSearch.Open strSQL, adoCon
 
 
-
 %>
+<p>
+	<h2>Cufflink results</h2>
+<% 
 
-<thead>
-<tr>
-<th>Design</th>
-<th>Product Name</th>
-<th>Range of item</th>
-</tr>
-</thead>
-<tbody>
-<% Do While not rsProductSearch.EOF 
+
+Do While not rsProductSearch.EOF 
+
 if rsProductSearch("type") = "cufflink" then
+
+if (iCount =0) then
 %>
-<tr>
-<td><a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" 	width= "230px" height= "146px"></a></td>
-<td><a class="menu" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a></td>
-	<td><a class="menu" href="<%= rsProductSearch("rangehref") %>"><%= rsProductSearch("rangename") %></a></td>
-</tr>
-<% 
+	<div class="row">
+	<% 
 end if
-rsProductSearch.MoveNext
-Loop 
-
-
-if i > 0 then
-	rsProductSearch.MoveFirst
-end if
-
-Do While not rsProductSearch.EOF 
-if rsProductSearch("type") = "square" then
 %>
-<tr>
-<td><a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>"  width="230" height="230"></a></td>
-<td><a class="menu" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a></td>
-	<td><a class="menu" href="<%= rsProductSearch("rangehref") %>"><%= rsProductSearch("rangename") %></a></td>
-</tr>
-<% 
-end if
-rsProductSearch.MoveNext
-Loop 
 
-if i > 0 then
-	rsProductSearch.MoveFirst
-end if
-
-Do While not rsProductSearch.EOF 
-if rsProductSearch("type") = "brooch" then
-%>
-<tr>
-<td><a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>"  width="230" height="230"></a></td>
-<td><a class="menu" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a></td>
-	<td><a class="menu" href="<%= rsProductSearch("rangehref") %>"><%= rsProductSearch("rangename") %></a></td>
-</tr>
-<% 
-end if
-rsProductSearch.MoveNext
-Loop 
-
-if i > 0 then
-	rsProductSearch.MoveFirst
-end if
-
-Do While not rsProductSearch.EOF 
-if rsProductSearch("type") = "earrings" then
-%>
-<tr>
-<td><a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>"  width="230" height="230"></a></td>
-<td><a class="menu" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a></td>
-	<td><a class="menu" href="<%= rsProductSearch("rangehref") %>"><%= rsProductSearch("rangename") %></a></td>
-</tr>
-<% 
-end if
-rsProductSearch.MoveNext
-Loop 
-
-if i > 0 then
-	rsProductSearch.MoveFirst
-end if
-
-Do While not rsProductSearch.EOF 
-if rsProductSearch("type") = "pendant" then
-%>
-<tr>
-<td><a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>"  width="230" height="345"></a></td>
-<td><a class="menu" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a></td>
-	<td><a class="menu" href="<%= rsProductSearch("rangehref") %>"><%= rsProductSearch("rangename") %></a></td>
-</tr>
-<% 
-end if
-rsProductSearch.MoveNext
-Loop 
-
-if i > 0 then
-	rsProductSearch.MoveFirst
-end if
-
-Do While not rsProductSearch.EOF 
-if rsProductSearch("type") = "pendant2" then
-%>
-<tr>
-<td><a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>"  width="350" height="350"></a></td>
-<td><a class="menu" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a></td>
-	<td><a class="menu" href="<%= rsProductSearch("rangehref") %>"><%= rsProductSearch("rangename") %></a></td>
-</tr>
-<% 
-end if
-rsProductSearch.MoveNext
-Loop %>
-</tr>
-</tbody>
-</table>
+    <div class="col-sm-4" class="col-md-4">
+<div class="ranges_thumbnail"> <a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" ></a>
+<a class="style-3" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
+<p><p>	<a class="style-3" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
+</div>
+</div>
 <%
+if (iCount =2) then
+	iCount = 0
+%>
+	</div>
+	<% 
+else 
+	iCount=iCount+1
+end if
+
+ 
+end if
+rsProductSearch.MoveNext
+
+
+Loop 
+
+
+	iCount = 0
+%>
+	</div>
+	<h2>Pocket square results</h2>
+<%
+
+
+
+if i > 0 then
+	rsProductSearch.MoveFirst
+end if
+
+Do While not rsProductSearch.EOF 
+
+if rsProductSearch("type") = "square" then
+
+if (iCount =0) then
+%>
+	
+	<div class="row">
+	<% 
+end if
+%>
+
+    <div class="col-sm-4" class="col-md-4">
+<div class="ranges_thumbnail"> <a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" ></a>
+<a class="style-3" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
+<p><p>	<a class="style-3" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
+</div>
+</div>
+<%
+if (iCount =2) then
+	iCount = 0
+%>
+	</div>
+	<% 
+else 
+	iCount=iCount+1
+end if
+
+ 
+end if
+rsProductSearch.MoveNext
+
+
+Loop 
+
+
+	iCount = 0
+%>
+	</div>
+	<h2>Brooch results</h2>
+<%
+
+
+
+if i > 0 then
+	rsProductSearch.MoveFirst
+end if
+
+Do While not rsProductSearch.EOF 
+
+if rsProductSearch("type") = "brooch" then
+
+if (iCount =0) then
+%>
+	
+	<div class="row">
+	<% 
+end if
+%>
+
+    <div class="col-sm-4" class="col-md-4">
+<div class="ranges_thumbnail"> <a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" ></a>
+<a class="style-3" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
+<p><p>	<a class="style-3" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
+</div>
+</div>
+<%
+if (iCount =2) then
+	iCount = 0
+%>
+	</div>
+	<% 
+else 
+	iCount=iCount+1
+end if
+
+ 
+end if
+rsProductSearch.MoveNext
+
+
+Loop 
+
+
+	iCount = 0
+%>
+	</div>
+	<h2>Earring results</h2>
+<%
+
+
+
+if i > 0 then
+	rsProductSearch.MoveFirst
+end if
+
+Do While not rsProductSearch.EOF 
+
+if rsProductSearch("type") = "earrings" then
+
+if (iCount =0) then
+%>
+	<div class="row">
+	<% 
+end if
+%>
+
+    <div class="col-sm-4" class="col-md-4">
+<div class="ranges_thumbnail"> <a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" ></a>
+<a class="style-3" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
+<p><p>	<a class="style-3" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
+</div>
+</div>
+<%
+if (iCount =2) then
+	iCount = 0
+%>
+	</div>
+	<% 
+else 
+	iCount=iCount+1
+end if
+
+ 
+end if
+rsProductSearch.MoveNext
+
+
+Loop 
+
+
+	iCount = 0
+%>
+	</div>
+	<h2>Pendant results</h2>
+<%
+
+
+
+if i > 0 then
+	rsProductSearch.MoveFirst
+end if
+
+Do While not rsProductSearch.EOF 
+
+if rsProductSearch("type") = "pendant" then
+
+if (iCount =0) then
+%>
+	<div class="row">
+	<% 
+end if
+%>
+
+    <div class="col-sm-4" class="col-md-4">
+<div class="ranges_thumbnail"> <a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" ></a>
+<a class="style-3" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
+<p><p>	<a class="style-3" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
+</div>
+</div>
+<%
+if (iCount =2) then
+	iCount = 0
+%>
+	</div>
+	<% 
+else 
+	iCount=iCount+1
+end if
+
+ 
+end if
+rsProductSearch.MoveNext
+
+Loop 
+
+
+
+if i > 0 then
+	rsProductSearch.MoveFirst
+end if
+
+Do While not rsProductSearch.EOF 
+
+if rsProductSearch("type") = "pendant2" then
+
+if (iCount =0) then
+%>
+	
+	<div class="row">
+	<% 
+end if
+%>
+
+    <div class="col-sm-4" class="col-md-4">
+<div class="ranges_thumbnail"> <a href="<%= rsProductSearch("itemhref") %>"><img src="<%= rsProductSearch("imagename") %>" alt="<%= rsProductSearch("itemname") %>" ></a>
+<a class="style-3" href="<%= rsProductSearch("itemhref") %>"><%= rsProductSearch("itemname") %></a>
+<p><p>	<a class="style-3" href="<%= rsProductSearch("rangehref") %>">Range - <%= rsProductSearch("rangename") %></a>
+</div>
+</div>
+<%
+if (iCount =2) then
+	iCount = 0
+%>
+	</div>
+	<% 
+else 
+	iCount=iCount+1
+end if
+
+ 
+end if
+rsProductSearch.MoveNext
+
+
+Loop 
+
+if (iCount <2) then
+	iCount = 0
+%>
+	</div>
+<%
+end if
+
+
+
+
 rsAddQuery.Close
 rsProductCount.Close
 rsProductSearch.Close
@@ -247,10 +410,9 @@ Set rsAddQuery = nothing
 Set adoCon = nothing
 
 %>
-</td>
-</tr>
+<p>
 </div>
-
+</div>
 
     <div id="includeFooter"></div>
          
