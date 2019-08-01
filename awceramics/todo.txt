@@ -1,0 +1,6 @@
+Title tags - improve
+viewport issues
+sitemap.xml update
+https?
+at least one h2 per page (done cufflinks and minilinks)
+remove classic cars from search
