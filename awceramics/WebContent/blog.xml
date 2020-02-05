@@ -5,6 +5,20 @@
 		<title>AWCeramics Blog Feed</title>
 		<link>http://www.awceramics.co.uk/blog.htm</link>
 		<description>This is Allison's blog</description>
+				<item>
+			<title>Happy New Year</title>
+			<link>http://www.awceramics.co.uk/blogs/blog73.htm</link>
+			<guid>http://www.awceramics.co.uk/blogs/blog73.htm</guid>
+			<description>Well it's that time of year ... </description>
+			<pubDate>Fri, 3 January 2020 17:43:00 GMT</pubDate>
+		  </item>
+		<item>
+			<title>Art in the Pen and Craft in the Pen</title>
+			<link>http://www.awceramics.co.uk/blogs/blog72.htm</link>
+			<guid>http://www.awceramics.co.uk/blogs/blog72.htm</guid>
+			<description>This year I took part in both these events ... </description>
+			<pubDate>Mon, 30 December 2019 17:43:00 GMT</pubDate>
+		  </item>
 		<item>
 			<title>North Yorkshire Open Studios</title>
 			<link>http://www.awceramics.co.uk/blogs/blog71.htm</link>
