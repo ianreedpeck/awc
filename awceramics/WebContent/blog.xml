@@ -5,7 +5,21 @@
 		<title>AWCeramics Blog Feed</title>
 		<link>http://www.awceramics.co.uk/blog.htm</link>
 		<description>This is Allison's blog</description>
-				<item>
+		<item>
+			<title>Skill versus creativity</title>
+			<link>http://www.awceramics.co.uk/blogs/blog75.htm</link>
+			<guid>http://www.awceramics.co.uk/blogs/blog75.htm</guid>
+			<description>Watching the throw down has brought home to me ... </description>
+			<pubDate>Mon, 2 March 2020 17:00:00 GMT</pubDate>
+		  </item>
+		<item>
+			<title>Stay Focused</title>
+			<link>http://www.awceramics.co.uk/blogs/blog74.htm</link>
+			<guid>http://www.awceramics.co.uk/blogs/blog74.htm</guid>
+			<description>When I came up to Gargrave one of the things I really wanted to do ... </description>
+			<pubDate>Tue, 18 February 2020 17:00:00 GMT</pubDate>
+		  </item>
+		<item>
 			<title>Happy New Year</title>
 			<link>http://www.awceramics.co.uk/blogs/blog73.htm</link>
 			<guid>http://www.awceramics.co.uk/blogs/blog73.htm</guid>
