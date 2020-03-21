@@ -35,6 +35,35 @@
 	
 	
 	<script>
+	
+	
+	/*Rollover effect on different image script-
+	By JavaScript Kit (http://javascriptkit.com)
+	*/
+
+	function changeimage(towhat){
+	if (document.images){
+	document.images.targetimage.src=towhat.src
+	}
+	}
+	function warp(){
+	window.location=gotolink
+	}
+	
+	var myimages=new Array()
+	var gotolink="#"
+
+	function preloadimages(){
+	for (i=0;i<preloadimages.arguments.length;i++){
+	myimages[i]=new Image()
+	myimages[i].src=preloadimages.arguments[i]
+	}
+	}
+
+
+	
+	
+	
 		var _roc_storeid= '39173';
 		var _roc_storeid2= '';
 		var _roc_storeid3= '';
@@ -47,7 +76,7 @@
 	</script>
 </head>
 
-<body>
+<body onload="setupZoom()">
 
      <div id="includeMenu"></div>	
 
@@ -55,7 +84,7 @@
 
 	 <div class="container">
     	<h1>Allison Wiffen Ceramics</h1>
-    	<p class="lead">Miniature works of art.</p>
+    	<p class="lead">Painted works of pottery.</p>
         </div>
 		
     </header>
@@ -64,29 +93,146 @@
      <div class="container">
 
 <ol class="breadcrumb">
-  <li><a href="../index.htm">Home</a></li>
+  <li><a href="./index.htm">Home</a></li>
   <li class="active">Pottery</li></ol>
   
-<h1 id="header">Painted pottery</h1>
-<div class="productimagecaptionpendantdet"><img src="./images/pendants/Baltic-pendant.jpg" alt="The Baltic pendant"  class="img-fluid" width="50%">
-<p>A picture of a pot</p>
-</div>
-<p class="lead"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <div> Gallery  </div>
+
+
+
+ <div class="row">
+ <div class="col-sm-4" class="col-md-2">
+ </div>
+ <div class="col-sm-4" class="col-md-2">
+ <div class="gallery_heading"> Gallery  </div>
+ </div>
+ <div class="col-sm-4" class="col-md-2">
+ </div>
+      </div>
+      
+  
   
    <div class="row">
- <div class="mlthumbnail">
-	<a href="./images/cufflinks/minilinks/70s circles minilink cufflinks.jpg"><img src="./images/cufflinks/minilinks/70s circles minilink cufflinks.jpg" alt="70s circles minilink cufflinks" onMouseover="changeimage(myimages[0])"></a>
-	<p>Cufflinks</p>
-</div>
-<div class = "mlthumbnail">
-	<a href="./images/cufflinks/minilinks/Back of minilink cufflinks.jpg"><img src="./images/cufflinks/minilinks/Back of minilink cufflinks.jpg" alt="Back of minilink cufflinks" onMouseover="changeimage(myimages[1])"></a>
-	<p>Minilink backs</p>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
 </div>
 </div>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+
   
  </div>
 
+ <div class="row">
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+
+  
+ </div>
+
+ <div class="row">
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+      <div class="col-sm-2" class="col-md-2">
+ <div class="ranges_thumbnail">
+	<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+	<p>A pot</p>
+</div>
+</div>
+
+  
+ </div>
 
     
    

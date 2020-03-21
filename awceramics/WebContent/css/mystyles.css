@@ -223,6 +223,30 @@ div.mlthumbnail img
 	border: 1px solid #777;
 }
 
+gallery_heading
+{
+	background: gray;
+	color: #00ff00;
+	text-align: center;
+}
+
+div.pottery_thumbnail
+{
+	width: 95%;
+	float: left;
+	margin: 0px 5px 5px 10px;
+	font-family: verdana;
+	font-weight: normal;
+	color: #89978D;
+}
+
+div.p_thumbnail img
+{
+	width: 25%;
+	margin: 5px 0 0 5px;
+	border: 1px;
+}
+
 div.ranges_thumbnail
 {
 	width: 95%;
@@ -235,7 +259,24 @@ div.ranges_thumbnail
 
 div.ranges_thumbnail img
 {
+	width: 25%;
+	margin: 5px 0 0 5px;
+	border: 1px;
+}
+
+div.rangs_thumbnail
+{
 	width: 95%;
+	float: left;
+	margin: 0px 5px 5px 10px;
+	font-family: verdana;
+	font-weight: normal;
+	color: #89978D;
+}
+
+div.rangs_thumbnail img
+{
+	width: 25%;
 	margin: 5px 0 0 5px;
 	border: 1px;
 }
