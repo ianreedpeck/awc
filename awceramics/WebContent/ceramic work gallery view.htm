@@ -18,6 +18,9 @@
    
 	<link href="css/mystyles.css" rel="stylesheet">  
     <link href="css/bootstrap-social.css" rel="stylesheet">
+    
+    <script src="./js-global/FancyZoom.js" type="text/javascript"></script>
+	<script src="./js-global/FancyZoomHTML.js" type="text/javascript"></script>
 
 	
 
@@ -32,6 +35,35 @@
 	
 	
 	<script>
+	
+	
+	/*Rollover effect on different image script-
+	By JavaScript Kit (http://javascriptkit.com)
+	*/
+
+	function changeimage(towhat){
+	if (document.images){
+	document.images.targetimage.src=towhat.src
+	}
+	}
+	function warp(){
+	window.location=gotolink
+	}
+	
+	var myimages=new Array()
+	var gotolink="#"
+
+	function preloadimages(){
+	for (i=0;i<preloadimages.arguments.length;i++){
+	myimages[i]=new Image()
+	myimages[i].src=preloadimages.arguments[i]
+	}
+	}
+
+
+	
+	
+	
 		var _roc_storeid= '39173';
 		var _roc_storeid2= '';
 		var _roc_storeid3= '';
@@ -44,7 +76,7 @@
 	</script>
 </head>
 
-<body>
+<body onload="setupZoom()">
 
      <div id="includeMenu"></div>	
 
@@ -52,63 +84,62 @@
 
 	 <div class="container">
     	<h1>Allison Wiffen Ceramics</h1>
-    	<p class="lead">Ceramic works of art.</p>
+    	<p class="lead">Painted works of pottery.</p>
         </div>
 		
     </header>
 
 
-    
+<div class="container">
+
+	<ol class="breadcrumb">
+  	<li><a href="./index.htm">Home</a></li>
+  <li><a href="./ceramic work main page.htm">Vessels</a></li>
+  <li class="active">Gallery</li></ol>
+  
 
 
 
-
- <div class="row"> 
- 
-
- 
-    <div class="col-sm-3" class="col-md-3">
-<div class="ranges_thumbnail">
-</div>
-
- </div>
-
- 
-
- 
-     <div class="col-sm-3" class="col-md-3">
-<div class="ranges_thumbnail">
-</div>
-
- </div>
-   </div>
-
-<div class="row">
-	<div class="col-sm-5 col-md-5 col-lg-push-1 col-md-push-1">    
-		<div><a href="ceramic work main page.htm"><img src="./images/pots/pot.jpg" alt="View pottery" class="img-fluid" width="65%"></a>
-			<p><a class="product_link" href="ceramic work main page.htm">View Pottery</a></p>
-		</div>
+	<div class="row">
+		 <div class="col-sm-4" class="col-md-2">
+			 <div class="gallery_heading"> Gallery  </div>
+		 </div>
 	</div>
 	
-	<div class="col-sm-5 col-md-5 col-lg-push-1 col-md-push-1">  
-		<div><a href="lw_earrings.htm"><img src="images/earrings/Dangly-earrings-waterloo-ro.jpg" alt="View London Wired earrings" class="img-fluid" width="65%"></a>
-			<p><a class="product_link" href="lw_earrings.htm">View Jewellery</a></p>
+<div class="row">
+      <div class="col-sm-3" class="col-md-3">
+		 <div class="ranges_thumbnail">
+			<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+			<p>A pot</p>
 		</div>
-	</div> 
+	  </div>
+      <div class="col-sm-3" class="col-md-3">
+		 <div class="ranges_thumbnail">
+			<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+			<p>A pot</p>
+		</div>
+	  </div>
+      <div class="col-sm-3" class="col-md-3">
+		 <div class="ranges_thumbnail">
+			<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+			<p>A pot</p>
+		</div>
+	  </div>	  	   
+       <div class="col-sm-3" class="col-md-3">
+		 <div class="ranges_thumbnail">
+			<a href="./images/pots/pot.jpg"><img src="./images/pots/pot.jpg" alt="70s circles minilink cufflinks"></a>
+			<p>A pot</p>
+		</div>
+	  </div> 
+ </div>
 
-</div>
 
-   
-<div class="row"> 
-	<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-lg-push-1 col-md-push-1">  
-		<p class="lead"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	</div>
-</div>
-   
+
+    
    
 
   
-<div id="includeFooter"></div>
+    <div id="includeFooter"></div>
          
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
