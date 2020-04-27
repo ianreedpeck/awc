@@ -100,7 +100,7 @@ body {
   right: 0px;
 }
 
-a.product_link:link {color: black; text-align: justify;}
+a.product_link:link {color: black; text-align: center;}
 a.product_link:visited {color: gray}
 a.product_link:hover {color: #2b542c; text-decoration: underline}
 a.product_link {text-decoration: none}

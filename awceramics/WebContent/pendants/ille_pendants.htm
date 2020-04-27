@@ -31,7 +31,7 @@
 	
 	  <div id="includeMenu"></div>	
 	  
-   <header class="jumbotron jumbotron-fluid">
+<header >
 
 	 <div class="container">
     	<h1>Allison Wiffen Ceramics</h1>
