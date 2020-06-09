@@ -172,6 +172,11 @@ a.product_link_search:hover {color: blue; text-decoration: underline; }
 a.product_link_search {text-decoration: none}
 
 
+a.ceramic_link:link {color: #808080; text-align: center;   font-size: 150%; }
+a.ceramic_link:visited {color: #808080}
+a.ceramic_link:hover {color: #808080; text-decoration: none}
+a.ceramic_link {text-decoration: none}
+
 .pocketsquareimg {
   left: 5;
   max-height: 600px;
