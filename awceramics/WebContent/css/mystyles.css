@@ -1,5 +1,5 @@
 .lead {
-	color: #535353;
+	color: #55677d;
 }
 
 .list-unstyled  li a  {
@@ -7,7 +7,7 @@
 }
 
 .list-unstyled  li a:hover {
-  color: #535353;
+  color: #55677d;
 }
 
 .mailto  {
@@ -82,48 +82,53 @@
 
 
 .navbar-inverse {
-  background: #ffffff;
-  color: #535353;
+  background: #55677d;
+  color: #ffffff;
 }
 .navbar-inverse .navbar-nav > .active > a {
   background: #ffffff;
-  color: #535353;
+  color: #55677d;
 }
 .navbar-inverse .navbar-nav > .active > a:hover {
-  background: #0000ff;
-  color: #535353;
+  background: #ffffff;
+  color: #55677d;
 }
 .navbar-inverse .navbar-nav > .active > a:focus {
   background: #ffffff;
-  color: #535353;
+  color: #ffffff;
 }
 .navbar-inverse .navbar-nav > .open > a {
   background: #ffffff;
-  color: #535353;
+  color: #ffffff;
 }
 .navbar-inverse .navbar-nav > .open > a:hover {
   background: #ffffff;
-  color: #535353;
+  color: #ffffff;
 }
 .navbar-inverse .navbar-nav > .open > a:focus {
-  background: #ffffff;
-  color: #535353;
+  background: #55677d;
+  color: #ffffff;
 }
+
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-  background-color: #ffffff;
-  color: #535353;
+  background-color: #55677d;
+  color: #ffffff;
 }
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
-  color: #535353;
+  color: #55677d;
 }
 .navbar-inverse .navbar-nav .open .dropdown-menu {
-  background-color: #ffffff;
-  color: #535353;;
+  background-color: #55677d;
+  color: #ffffff;;
 }
 .navbar .nav > li.current-menu-item > a, .navbar .nav > li.current-menu-ancestor > a, 
 .navbar .nav > li > a:hover, .navbar .nav > li > a:focus {
-color:          #535353;
+color:          #ffffff;
 }
+
+
+
+
 
 address {
   color: #0f0f0f;
@@ -363,7 +368,7 @@ div.cufflink_product
 	margin: 0px 5px 5px 10px;
 	font-family: Arial;
 	font-weight: normal;
-	color: #535353;
+	color: #55677d;
 }
 
 div.cufflink_product img
@@ -416,12 +421,12 @@ div.cufflink_product img
 
 h1 {
 	margin: 0px 0px 0 0px;
-	color: #535353;
+	color: #55677d;
 }
 
 h2 {
 	margin: 20px 10px 0 5px;
-	color: #535353;
+	color: #55677d;
 }
 
 table.search
@@ -478,7 +483,7 @@ table.search img
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
 /* #mc_embed_signup form {display:block; position:relative; text-align:left; padding:10px 0 10px 3%} */
 #mc_embed_signup form {margin-top: 100px;} 
-#mc_embed_signup h2 {font-weight:bold; padding:0; margin:15px 0; font-size:1.4em;color: #535353;}
+#mc_embed_signup h2 {font-weight:bold; padding:0; margin:15px 0; font-size:1.4em;color: #55677d;}
 #mc_embed_signup input {border: 1px solid #ABB0B2; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
 #mc_embed_signup input[type=checkbox]{-webkit-appearance:checkbox;}
 #mc_embed_signup input[type=radio]{-webkit-appearance:radio;}
@@ -491,7 +496,7 @@ table.search img
 #mc_embed_signup .mc-field-group {clear:left; position:relative; width:96%; padding-bottom:3%; min-height:50px;}
 #mc_embed_signup .size1of2 {clear:none; float:left; display:inline-block; width:46%; margin-right:4%;}
 * html #mc_embed_signup .size1of2 {margin-right:2%; /* Fix for IE6 double margins. */}
-#mc_embed_signup .mc-field-group label {display:block; margin-bottom:3px; color: #535353;}
+#mc_embed_signup .mc-field-group label {display:block; margin-bottom:3px; color: #55677d;}
 #mc_embed_signup .mc-field-group input {display:block; width:100%; padding:8px 0; text-indent:2%;}
 #mc_embed_signup .mc-field-group select {display:inline-block; width:99%; padding:5px 0; margin-bottom:2px;}
 
