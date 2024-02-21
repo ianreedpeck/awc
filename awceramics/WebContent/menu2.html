@@ -9,6 +9,8 @@
 				</button>
                 
 			</div>
+			
+		
 			<div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>
@@ -23,8 +25,10 @@
                            Vessels <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="../ceramic work main page.htm">Work</a></li>
-                             <li><a href="../ceramic work shop.htm">Shop</a></li>
+                          <!--   <li><a href="../ceramic work main page.htm">Work</a></li>  -->
+           					 <li><a href="../pottery gallery.htm">Pottery Gallery</a></li>
+                            <li><a href="../wall art gallery.htm">Wall Art Gallery</a></li>
+<!--                             <li><a href="../ceramic work shop.htm">Shop</a></li>-->
                         </ul>
                     </li>
                    
@@ -46,6 +50,18 @@
                             
                         </ul>
                     </li>
+                    
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                            role="button" aria-haspopup="true" aria-expanded="false">
+                             Teaching <span class="caret"></span>
+                        </a>
+					  <ul class="dropdown-menu">
+                            <li><a href="../throwing taster session.htm">Throwing Taster Session</a></li>
+                        
+                            
+                        </ul>
+                   </li>
 								
 					 <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
@@ -54,10 +70,14 @@
                         </a>
 					  <ul class="dropdown-menu">
                             <li><a href="../allison.htm">Allison</a></li>
-                            <li><a href="../blog.htm">Allison's Blog</a></li>
-                   			<li><a href="../contact.htm">Contact Details</a></li>
+                        	<li><a href="../contact.htm">Contact Details</a></li>
                             
                         </ul>
+                   </li>
+                   
+                    <li>
+                           <a href="../blog.htm">Allison's Blog</a>
+                    </li>
                    
                      <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
@@ -74,9 +94,17 @@
                         </ul>
                     </li>
                     
- 					<li>
+<!--  					<li> -->
+<!--                         <a id="btnSearch"> -->
+<!--                             <span  glyphicon glyphicon-log-in" ></span> Search -->
+<!--                         </a> -->
+<!--                     </li> -->
+                     
+                      </li>
+              
+               		       <li class="dropdown">
                         <a id="btnSearch">
-                            <span  glyphicon glyphicon-log-in" ></span> Search
+                            <span class="glyphicon glyphicon-log-in" ></span> Search
                         </a>
                     </li>
                       
@@ -114,15 +142,15 @@
         </div>
     </div>
 	
-	 <script> 
+	<script> 
 	     
-	    
-	    $(document).ready(function(){
-	    
+	   
+	    jQuery(document).ready(function($){
+
 		    $("#btnSearch").click(function(){
 	            $("#searchModal").modal("show");
 	        });
-		    
+	
 			$('#searchModal').on('shown.bs.modal', function() {
 				$('#searchtext').focus();
 			});

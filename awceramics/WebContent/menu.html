@@ -1,3 +1,7 @@
+
+    
+    	
+
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -9,6 +13,8 @@
 				</button>
                 
 			</div>
+			
+	
 			<div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-light">
                     <li >
@@ -23,8 +29,10 @@
                            Vessels <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="ceramic work main page.htm">Work</a></li>
-                            <li><a href="ceramic work shop.htm">Shop</a></li>
+                      <!--       <li><a href="ceramic work main page.htm">Work</a></li>  -->
+                       		<li><a href="pottery gallery.htm">Pottery Gallery</a></li>
+                            <li><a href="wall art gallery.htm">Wall Art Gallery</a></li>
+<!--                            <li><a href="ceramic work shop.htm">Shop</a></li>-->
                         </ul>
                     </li>
                    
@@ -46,7 +54,17 @@
                             
                         </ul>
                     </li>
-					
+					 <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                            role="button" aria-haspopup="true" aria-expanded="false">
+                             Teaching <span class="caret"></span>
+                        </a>
+					  <ul class="dropdown-menu">
+                            <li><a href="throwing taster session.htm">Throwing Taster Session</a></li>
+                        
+                            
+                        </ul>
+                   </li>
 					 <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                             role="button" aria-haspopup="true" aria-expanded="false">
@@ -54,10 +72,15 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="allison.htm">Allison</a></li>
-                            <li><a href="blog.htm">Allison's Blog</a></li>
                    			<li><a href="contact.htm">Contact Details</a></li>
                             
                         </ul>
+                    </li>
+					
+					     
+                   
+                    <li>
+                           <a href="blog.htm">Allison's Blog</a>
                     </li>
 					
 					
@@ -83,11 +106,29 @@
                         </a>
                     </li>
              
+<!--                                 <li class="dropdown">-->
+<!--                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"-->
+<!--                            role="button" aria-haspopup="true" aria-expanded="false">-->
+<!--                            <span class="glyphicon glyphicon-briefcase"-->
+<!--                                    aria-hidden="true"></span> Search <span class="caret"></span>-->
+<!--                        </a>-->
+<!--                        <ul class="dropdown-menu">-->
+<!--                            <li><a href="search.htm">Search Screen</a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+             
+             
              
 					<li class="dropdown"><a href="https://www.romancart.com/cart.asp?storeid=39173"><i class="glyphicon glyphicon-shopping-cart"></i> Basket</a></li>
 					
                   </ul>
-                  
+<!--             <ul class="nav navbar-nav navbar-right">-->
+<!--                    <li>-->
+<!--                        <a id="btnSearch">-->
+<!--                            <span class="pull-right glyphicon glyphicon-log-in" ></span> Search-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                </ul>     -->
               
              
                    
@@ -100,8 +141,8 @@
 		</div>
 	</nav>
 	
-	
-	 <div id="searchModal" class="modal fade" role="dialog">
+	    
+     <div id="searchModal" class="modal fade" role="dialog">
 	 
         <div class="modal-dialog" role="document">
             <!-- Modal content-->
@@ -123,24 +164,23 @@
             </div>
         </div>
     </div>
-	
-	 <script> 
+    
+   
+    <script> 
 	     
-	    
-	    $(document).ready(function(){
-	    
+	   
+	    jQuery(document).ready(function($){
+
 		    $("#btnSearch").click(function(){
 	            $("#searchModal").modal("show");
 	        });
-		    
+	
 			$('#searchModal').on('shown.bs.modal', function() {
 				$('#searchtext').focus();
 			});
 		    
 	    });  
     </script> 	
-    
-    	
-    
    
-    
+	
+     
